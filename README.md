@@ -7,11 +7,18 @@
 
 ## Steps (For Debian, Ubuntu and derivatives):
 
-* Install *AMP stack (PHP >= 7.1.3)
+* Install *AMP stack (PHP >= 7.1.3, PostgreSQL >= 9.5) -- I've provided a script that installs PHP7.2 and Apache2, for production deployment purposes
 * Install Composer
 * Install Laravel
 * Install Redis & Beanstalkd (For API)
 * Config Laravel environment for each project
 * Clone repo - Enjoy!
 
-P.S.: Dockerized project will be done as an extra if time allows
+## Dockerized components
+
+So far, several components have been dockerized for a stack deployment in a Swarm:
+
+* Redis server
+* Database server
+* Beanstalk server
+* Adminer
