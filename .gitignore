@@ -24,4 +24,4 @@ Homestead.json
 
 # Docker related files (to be implemented)
 
-stack.yml
+Dockerfile
