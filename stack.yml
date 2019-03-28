@@ -5,7 +5,7 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: l10nh3arT
+      POSTGRES_PASSWORD: your_password
     ports:
       - 5432:5432
 
