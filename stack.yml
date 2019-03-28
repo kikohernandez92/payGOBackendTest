@@ -23,3 +23,9 @@ services:
     image: redis:latest
     ports:
       - 6379:6379
+
+  adminpanel:
+    build: .
+    image: kikohernandez92/laravel
+    ports:
+      - 8000:8000

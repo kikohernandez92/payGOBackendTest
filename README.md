@@ -19,6 +19,6 @@
 So far, several components have been dockerized for a stack deployment in a Swarm:
 
 * Redis server
-* Database server
+* Database server **(LOG IN TO ADMINER AND IMPORT VOYAGERSQL.sql BEFORE TRYING TO LOG INTO THE ADMIN PANEL)**
 * Beanstalk server
 * Adminer
