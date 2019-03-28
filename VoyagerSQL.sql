@@ -352,3 +352,8 @@ CREATE TABLE "public"."users" (
     CONSTRAINT "users_pkey" PRIMARY KEY ("id"),
     CONSTRAINT "users_role_id_foreign" FOREIGN KEY (role_id) REFERENCES roles(id) NOT DEFERRABLE
 ) WITH (oids = false);
+
+INSERT INTO "users" ("id", "name", "email", "email_verified_at", "password", "remember_token", "created_at", "updated_at", "avatar", "role_id", "settings") VALUES
+(1,	'Admin Istrator',	'admin@email.com',	NULL,	'$2y$10$8xNI3nH/oEF7wdItsbrKveaOtgARvNnTTjfcVroWZiCvStmf1cShG',	NULL,	'2019-03-28 17:05:45',	'2019-03-28 17:05:45',	'users/default.png',	1,	NULL);
+
+-- 2019-03-28 18:27:22.17568+00
