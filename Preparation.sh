@@ -16,9 +16,10 @@ apt install -y php7.2-dev php7.2-bz2 php7.2-intl php7.2-json php7.2-opcache php7
 apt install -y php7.2-imap php7.2-pspell php7.2-recode php7.2-sqlite3 php7.2-tidy php7.2-pgsql
 apt install -y composer
 composer global require laravel/installer
-cd /payGOBackendTest/adminpanel && composer require tcg/voyager
+cd /payGOBackendTest/adminpanel && composer require backpack/crud
 cp envconfig .env
-php artisan voyager:install --with-dummy
+php artisan backpack:base:install
+php artisan backpack:crud:install
 
 # Enable PHP 7.2 in Apache
 a2enmod php7.2

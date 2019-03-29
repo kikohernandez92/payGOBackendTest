@@ -18,7 +18,7 @@
 
 ## What's working
 
-* The admin panel/CRUD works locally, following the steps above, with or without dockerized Redis & Postgres
+* The admin panel/CRUD works locally, following the steps above, with or without dockerized Redis & Postgres (If you dockerize the DB only, be sure to run the migrations and register a user before trying to log in)
 
 ## Dockerized components
 

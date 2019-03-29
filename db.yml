@@ -18,6 +18,20 @@ services:
     networks:
       - swarmnet
 
+  beanstalk:
+    image: schickling/beanstalkd:latest
+    ports:
+      - 11300:11300
+    networks:
+      - swarmnet
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    networks:
+      - swarmnet
+
 networks:
   swarmnet:
     external: true  
