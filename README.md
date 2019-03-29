@@ -2,7 +2,7 @@
 
 ## This app is made as a part of an ability test, in order to apply for a work position at PayGO. 
 
-* Project was developed using Voyager as the CRUD/Admin panel generator and Apiato as the API generation tool
+* Project was developed using Voyager as the CRUD/Admin panel generator and Apiato as the API generation tool, transitioned to Backpack due to time restrictions and an issue with Voyager not showing the CRUD correctly
 * Database engine used is PostgreSQL 11, hosted in another server
 
 ## Steps (For Debian, Ubuntu and derivatives):
