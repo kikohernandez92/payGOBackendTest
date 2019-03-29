@@ -10,25 +10,13 @@ services:
       - 5432:5432
     networks:
       - swarmnet
+    volumes:
+      - '~/Documents/persistencia:/var/lib/postgresql/data'
 
   adminer:
     image: adminer
     ports:
       - 8080:8080
-    networks:
-      - swarmnet
-
-  beanstalk:
-    image: schickling/beanstalkd:latest
-    ports:
-      - 11300:11300
-    networks:
-      - swarmnet
-
-  redis:
-    image: redis:latest
-    ports:
-      - 6379:6379
     networks:
       - swarmnet
 
