@@ -1,3 +1,5 @@
 #!/bin/sh
 
-cd /payGOBackendTest/adminpanel
+git clone https://github.com/kikohernandez92/payGOBackendTest.git && cd /payGOBackendTest
+./Preparation.sh
+cd /payGOBackendTest/adminpanel && php artisan serve
