@@ -14,6 +14,8 @@
 * Config Laravel environment for each project
 * Clone repo - Enjoy!
 
+**You may run the project locally or within containers (TBD)**
+
 ## What's working
 
 * The admin panel/CRUD works locally, following the steps above, with or without dockerized Redis & Postgres
