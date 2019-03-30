@@ -26,3 +26,5 @@ Homestead.json
 
 Dockerfile
 localstack.yml
+Local.sh
+LShutdown.sh
