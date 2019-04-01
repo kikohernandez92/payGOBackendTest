@@ -27,14 +27,25 @@ class EmpleadoCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/empleado');
         $this->crud->setEntityNameStrings('empleado', 'empleados');
 
-        /*
+	// Habilitando los detalles de cada empleado
+        $this->crud->enableDetailsRow();
+
+	// Permitiendo a los administradores ver los detalles
+	$this->crud->allowAccess('details_row');
+
+	// Habilitando la función de descarga de CSV
+	$this->crud->enableExportButtons();
+
+	// Habilitando la persistencia de filtrado y vista de la tabla mientras la sesión permanezca activa
+	$this->crud->enablePersistentTable();
+	/*
         |--------------------------------------------------------------------------
         | CrudPanel Configuration
         |--------------------------------------------------------------------------
         */
 
-        // TODO: remove setFromDb() and manually define Fields and Columns
-        $this->crud->setFromDb();
+        // Define en la vista las columnas que serán vistas y los campos a rellenar
+        $this->crud->setFromDb(); // Lo define automáticamente con las etiquetas y los campos de su respectiva tabla en la BD
 
         // add asterisk for fields that are required in EmpleadoRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');

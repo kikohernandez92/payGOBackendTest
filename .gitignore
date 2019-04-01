@@ -28,3 +28,4 @@ Dockerfile
 localstack.yml
 Local.sh
 LShutdown.sh
+execute
