@@ -21,6 +21,7 @@ cp envconfig .env
 php artisan backpack:base:install
 php artisan backpack:crud:install --no-interaction
 php artisan migrate
+php artisan serve --host=0.0.0.0
 
 # Enable PHP 7.2 in Apache
 a2enmod php7.2
