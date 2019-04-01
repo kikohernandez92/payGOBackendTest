@@ -19,7 +19,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('apellido2');
             $table->string('cedula')->unique();
             $table->date('fechanac');
-            $table->char('genero');
+            $table->char('genero', 1);
             $table->date('fechaing');
             $table->bigInteger('numempleado');
             $table->string('cargo');
