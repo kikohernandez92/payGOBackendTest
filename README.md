@@ -7,7 +7,7 @@
 
 ## Steps for launching the Admin Panel (For Debian, Ubuntu and derivatives):
 
-* Install *AMP stack (PHP >= 7.1.3, PostgreSQL 11) -- I've provided a script that installs PHP7.2 and Apache2, for production deployment purposes
+* Install *AMP stack (PHP >= 7.1.3, PostgreSQL 11) -- I've provided a script that installs full requirements (Including Laravel and Composer)
 * Install Composer
 * Install Laravel
 * Install Redis & Beanstalkd (For API)
@@ -15,6 +15,9 @@
 * Clone repo - Enjoy!
 
 **You may run the project locally or within containers**
+
+* LocalPreparation.sh if you intend to run the apps locally
+* Preparation.sh if you intend to dockerize the apps
 
 ## What's working
 
