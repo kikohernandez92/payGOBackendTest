@@ -19,7 +19,7 @@ class Empleado extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = [];
+    protected $fillable = [nombres, apellido1, apellido2, cedula, fechanac, genero, fechaing, numempleado, cargo, jefe, zona, municipio, departamento, ventas, email, contrasena, imgperfil, celular];
     // protected $hidden = [];
     // protected $dates = [];
 
