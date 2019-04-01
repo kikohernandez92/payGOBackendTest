@@ -27,12 +27,6 @@ class EmpleadoCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/empleado');
         $this->crud->setEntityNameStrings('empleado', 'empleados');
 
-	// Habilitando los detalles de cada empleado (existe un modal implementado, este es un cuadro extra de detalles)
-        $this->crud->enableDetailsRow();
-
-	// Permitiendo a los administradores ver los detalles
-	$this->crud->allowAccess('details_row');
-
 	// Habilitando la función de descarga de CSV
 	$this->crud->enableExportButtons();
 
@@ -57,17 +51,17 @@ class EmpleadoCrudController extends CrudController
          	'label' => "P. Apellido",
          	'type' => 'string'
          ]);
-        /*$this->crud->addColumn([
+        $this->crud->addColumn([
                 'name' => 'apellido2', 
                 'label' => "S. Apellido", 
                 'type' => 'string'
-         ]);*/
+         ]);
         $this->crud->addColumn([
                 'name' => 'cedula', 
                 'label' => "Cédula", 
                 'type' => 'string'
          ]);
-        /*$this->crud->addColumn([
+        $this->crud->addColumn([
                 'name' => 'fechanac', 
                 'label' => "Fecha Nac.", 
                 'type' => 'date'
@@ -76,12 +70,12 @@ class EmpleadoCrudController extends CrudController
                 'name' => 'genero', 
                 'label' => "Género", 
                 'type' => 'char'
-         ]);*/
-        /*$this->crud->addColumn([
+         ]);
+        $this->crud->addColumn([
                 'name' => 'fechaing', 
                 'label' => "Fecha Ingreso", 
                 'type' => 'date'
-         ]);*/
+         ]);
         $this->crud->addColumn([
                 'name' => 'numempleado', 
                 'label' => "N° Empleado", 
@@ -102,7 +96,7 @@ class EmpleadoCrudController extends CrudController
                 'label' => "Zona", 
                 'type' => 'string'
          ]);
-        /*$this->crud->addColumn([
+        $this->crud->addColumn([
                 'name' => 'municipio', 
                 'label' => "Municipio", 
                 'type' => 'string'
@@ -111,18 +105,18 @@ class EmpleadoCrudController extends CrudController
                 'name' => 'departamento', 
                 'label' => "Departamento", 
                 'type' => 'string'
-         ]);*/
-        /*$this->crud->addColumn([
+         ]);
+        $this->crud->addColumn([
                 'name' => 'ventas', 
                 'label' => "Ventas 2019", 
                 'type' => 'decimal, 9, 2'
-         ]);*/
+         ]);
         $this->crud->addColumn([
                 'name' => 'email', 
                 'label' => "E-Mail", 
                 'type' => 'string'
          ]);
-       /* $this->crud->addColumn([
+        $this->crud->addColumn([
                 'name' => 'contrasena', 
                 'label' => "Contraseña", 
                 'type' => 'string'
@@ -131,7 +125,7 @@ class EmpleadoCrudController extends CrudController
                 'name' => 'imgperfil', 
                 'label' => "Imagen de perfil", 
                 'type' => 'string'
-         ]);*/
+         ]);
         $this->crud->addColumn([
                 'name' => 'celular', 
                 'label' => "Celular", 
