@@ -27,7 +27,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('zona');
             $table->string('municipio');
             $table->string('departamento');
-            $table->decimal('ventas', 9, 2);
+            $table->decimal('ventas', 13, 2);
             $table->string('email');
             $table->string('contrasena');
             $table->text('imgperfil');
