@@ -21,7 +21,7 @@ cp envconfig .env
 php artisan backpack:base:install
 php artisan backpack:crud:install --no-interaction
 php artisan migrate
-
+php artisan backpack:base:add-sidebar-content "<li><a href='{{ backpack_url('empleado') }}'><i class='fa fa-users'></i> <span>Empleados</span></a></li>"
 # Enable PHP 7.2 in Apache
 a2enmod php7.2
 service apache2 restart
