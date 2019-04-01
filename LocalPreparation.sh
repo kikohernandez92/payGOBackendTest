@@ -18,9 +18,9 @@ sudo apt install -y composer
 composer global require laravel/installer
 cd adminpanel && composer require backpack/crud && composer require phpoffice/phpspreadsheet && composer require maatwebsite/excel
 cp envconfig .env
+php artisan backpack:base:install
+php artisan backpack:crud:install --no-interaction
 php artisan migrate
-#php artisan backpack:base:install
-#php artisan backpack:crud:install
 
 # Enable PHP 7.2 in Apache
 a2enmod php7.2
