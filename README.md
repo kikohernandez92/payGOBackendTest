@@ -17,7 +17,7 @@
 **You may run the project locally or within containers**
 
 * LocalPreparation.sh if you intend to run the apps locally
-* Preparation.sh if you intend to dockerize the apps
+* Preparation.sh if you intend to dockerize the apps -- "execute" file is only for dockerized solutions
 
 ## What's working
 
