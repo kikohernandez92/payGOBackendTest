@@ -20,13 +20,14 @@ cd adminpanel && composer require backpack/crud && composer require phpoffice/ph
 cp envconfig .env
 php artisan backpack:base:install
 php artisan backpack:crud:install --no-interaction
-php artisan migrate
+php artisan migrate:refresh
 php artisan backpack:base:add-sidebar-content "<li><a href='{{ backpack_url('empleado') }}'><i class='fa fa-users'></i> <span>Empleados</span></a></li>"
-php artisan serve --host=0.0.0.0
+php artisan backpack:base:add-sidebar-content "<li><a href='{{ route('ieview') }}'><i class='fa fa-users'></i> <span>Cargar Archivo</span></a></li>"
 
 # Enable PHP 7.2 in Apache
 a2enmod php7.2
 service apache2 restart
+php artisan serve --host=0.0.0.0 --port=80
 
 # Update the CLI PHP version
 update-alternatives --set php /usr/bin/php7.2

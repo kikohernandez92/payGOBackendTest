@@ -7,21 +7,21 @@
 
 ## Steps for launching the Admin Panel (For Debian, Ubuntu and derivatives):
 
-* Install *AMP stack (PHP >= 7.1.3, PostgreSQL 11) -- I've provided a script that installs full requirements (Including Laravel and Composer)
-* Install Composer
-* Install Laravel
-* Install Redis & Beanstalkd (For API)
-* Config Laravel environment for each project
-* Clone repo - Enjoy!
+** Locally (Recommended using Docker Swarm in a single host for launching the stack) **
 
-**You may run the project locally or within containers**
+* Launch localstack.yml with Local.sh script
+* Run LocalPreparation.sh
+* Set the .env values accordingly
 
-* LocalPreparation.sh if you intend to run the apps locally
-* Preparation.sh if you intend to dockerize the apps -- "execute" file is only for dockerized solutions
+** On Docker **
+
+* Just launch the app with Launch.sh and let Docker take the wheel!
+
+** Don't forget to register a user once the app is up **
 
 ## What's working
 
-* The admin panel/CRUD is complete, follow the steps above for installation, with or without dockerized Redis & Postgres (If you dockerize the DB only, be sure to run the migrations and register a user before trying to log in)
+* The admin panel/CRUD is complete, there's a test file for the Excel File imports. 
 
 ## Dockerized components
 
