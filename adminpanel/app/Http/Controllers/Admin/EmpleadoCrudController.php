@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
-
+use App\Imports\EmpleadosImport; // Se añade el modelo de importación creado anteriormente al controlador
 // VALIDATION: change the requests to match your own file names if you need form validation
 use App\Http\Requests\EmpleadoRequest as StoreRequest;
 use App\Http\Requests\EmpleadoRequest as UpdateRequest;
@@ -252,4 +252,12 @@ class EmpleadoCrudController extends CrudController
         // use $this->data['entry'] or $this->crud->entry
         return $redirect_location;
     }
+
+    public function import()
+    {
+        Excel::import(new EmpleadosImport, request()->file('your_file'));
+
+        return redirect('/')->with('success', 'All good!');
+    }
+
 }
