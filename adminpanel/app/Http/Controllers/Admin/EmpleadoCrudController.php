@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use Illuminate\Http\Request; // Se añade el controlador de métodos HTTP
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Imports\EmpleadosImport; // Se añade el modelo de importación creado anteriormente al controlador
-// VALIDATION: change the requests to match your own file names if you need form validation
+use Maatwebsite\Excel\Facades\Excel; // Se añade la librería de procesamiento de archivos excel
 use App\Http\Requests\EmpleadoRequest as StoreRequest;
 use App\Http\Requests\EmpleadoRequest as UpdateRequest;
 use Backpack\CRUD\CrudPanel;
@@ -253,11 +253,19 @@ class EmpleadoCrudController extends CrudController
         return $redirect_location;
     }
 
-    public function import()
+    public function import() // Método que ejecuta la importación de archivos
     {
-        Excel::import(new EmpleadosImport, request()->file('your_file'));
+        Excel::import(new EmpleadosImport, request()->file('file'));
 
-        return redirect('/')->with('success', 'All good!');
+        return redirect('/admin')->with('success', 'All good!');
+    }
+
+    public function importExportView() // Método que crea la vista de importación
+
+    {
+
+       return view('import');
+
     }
 
 }

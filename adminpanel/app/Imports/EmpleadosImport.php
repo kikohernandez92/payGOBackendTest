@@ -8,6 +8,7 @@ use Maatwebsite\Excel\Concerns\ToModel;
 
 class EmpleadosImport implements ToModel
 {
+
     /**
     * @param array $row
     *
@@ -15,18 +16,14 @@ class EmpleadosImport implements ToModel
     */
     public function model(array $row) // modela los datos del archivo excel o CSV según el formato especificado para la tabla de empleados en la BD
     {
-    	if (!isset($row[0])) {
-        	return null;
-    	}
-
 	return new Empleado([
            'nombres'      => $row[0],
            'apellido1'    => $row[1],
            'apellido2'    => $row[2],
            'cedula'       => $row[3],
-           'fechanac'     => $row[4],
+           'fechanac'     => \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row[4]),
            'genero'       => $row[5],
-           'fechaing'     => $row[6],
+           'fechaing'     => \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row[6]),
            'numempleado'  => $row[7],
            'cargo'        => $row[8],
            'jefe'         => $row[9],
@@ -35,7 +32,7 @@ class EmpleadosImport implements ToModel
            'departamento' => $row[12],
            'ventas'       => $row[13],
            'email'        => $row[14],
-           'contrasena'   => Hash::make($row[15)],
+           'contrasena'   => Hash::make($row[15]),
            'imgperfil'    => $row[16],
            'celular'      => $row[17],
         ]);

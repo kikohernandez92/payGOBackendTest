@@ -23,11 +23,11 @@ class CreateEmpleadosTable extends Migration
             $table->date('fechaing');
             $table->bigInteger('numempleado');
             $table->string('cargo');
-            $table->bigInteger('jefe');
+            $table->bigInteger('jefe')->nullable();
             $table->string('zona');
             $table->string('municipio');
             $table->string('departamento');
-            $table->decimal('ventas', 13, 2);
+            $table->decimal('ventas', 13, 2)->nullable();
             $table->string('email');
             $table->string('contrasena');
             $table->text('imgperfil');
